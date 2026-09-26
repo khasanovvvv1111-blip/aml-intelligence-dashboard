@@ -200,7 +200,7 @@ if page == "Overview":
             .size()
             .reset_index(name="alerts")
         )
-        fig = px.donut(
+        fig = px.pie(
             risk_counts,
             names="risk_band",
             values="alerts",
