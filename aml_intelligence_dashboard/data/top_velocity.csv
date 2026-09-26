@@ -1,0 +1,13 @@
+feature,importance
+last5__gap_mean,4.6
+gap_le_1h_share,3.4
+burst_15m__mean_cnt,3.2
+last10__gap_mean,3.2
+gap_q10_sec,3.0
+gap_le_15m_share,3.0
+gap_le_1m_share,2.8
+gap_q90_sec,2.6
+gap_le_30m_share,2.6
+gap_q25_sec,2.2
+burst_1h__mean_cnt,2.2
+burst_5m__std_cnt,2.2

@@ -1,0 +1,13 @@
+feature,importance
+type_bank_otkazmasi_amt_std,42.4
+type_bank_otkazmasi_amt_mean,40.6
+type_karta_amt_std,39.2
+type_xalqaro_90d_amt_mean,33.0
+type_naqd_amt_mean,31.8
+type_switch_rate,22.8
+type_naqd_abs_sum,21.2
+type_naqd_90d_amt_mean,17.4
+type_bank_otkazmasi_30d_amt_mean,16.0
+type_naqd_amt_std,13.6
+p14_90d__type_naqd_share,13.6
+type_naqd_30d_amt_mean,13.0

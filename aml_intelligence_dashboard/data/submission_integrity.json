@@ -1,0 +1,10 @@
+{
+  "rows": 6000,
+  "unique_ids": 6000,
+  "duplicate_ids": 0,
+  "missing_scores": 0,
+  "min_score": 0.0005058333,
+  "max_score": 0.9998275,
+  "all_scores_0_1": true,
+  "test_ids_match": true
+}
