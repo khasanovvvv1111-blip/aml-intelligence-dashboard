@@ -22,6 +22,11 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+
+      [data-stale="true"] {
+        opacity: 1 !important;
+      }
+
       .stApp {
         background:
           radial-gradient(circle at 10% 0%, rgba(26, 115, 232, .12), transparent 30%),
