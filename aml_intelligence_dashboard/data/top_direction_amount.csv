@@ -1,0 +1,13 @@
+feature,importance
+naqd__kirim_amt_mean,131.8
+bank_otkazmasi__chiqim_amt_mean,112.4
+karta__chiqim_amt_mean,64.4
+in_amt_min,53.0
+out_amt_min,32.2
+xalqaro__chiqim_amt_mean,23.6
+bank_otkazmasi__kirim_amt_mean,19.0
+naqd__chiqim_share,13.6
+out_amt_max_7d,11.0
+out_amt_std_7d,10.8
+out_amt_max,10.6
+karta__chiqim_30d_share,10.4

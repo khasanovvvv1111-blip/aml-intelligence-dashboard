@@ -1,0 +1,22 @@
+{
+  "team_id": "9812BA55",
+  "train_alerts": 14000,
+  "test_alerts": 6000,
+  "escalation_rate": 0.1717857142857143,
+  "positive_alerts": 2405,
+  "negative_alerts": 11595,
+  "train_date_min": "2025-01-01",
+  "train_date_max": "2026-12-31",
+  "test_date_min": "2025-01-01",
+  "test_date_max": "2026-12-31",
+  "v1_auc": 0.6210926818947518,
+  "v2_lgb_full_auc": 0.6228994144906176,
+  "v2_lgb_behavior_auc": 0.6212506466064034,
+  "v2_cat_auc": 0.6132814793099399,
+  "v2_best_auc": 0.6241156710496943,
+  "delta_vs_v1": 0.0030229891549425,
+  "blend_mode": "rank",
+  "w_lgb_full": 0.5,
+  "w_lgb_behavior": 0.3,
+  "w_cat": 0.1999999999999999
+}

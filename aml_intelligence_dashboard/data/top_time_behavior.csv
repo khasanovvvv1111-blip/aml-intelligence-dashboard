@@ -1,0 +1,13 @@
+feature,importance
+night_share_60d,22.4
+p30_180d__weekend_share,18.8
+p30_180d__night_share,12.4
+weekend_night_share,10.8
+p3_14d__night_share,10.0
+p3_14d__weekend_share,9.4
+p14_90d__weekend_share,9.0
+p14_90d__night_share,8.4
+night_share,8.4
+hour_entropy,8.4
+night_share_180d,7.2
+p7_30d__weekend_share,7.2

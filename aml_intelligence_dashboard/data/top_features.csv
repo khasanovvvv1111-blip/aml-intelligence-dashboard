@@ -1,0 +1,81 @@
+feature,importance,family,human_label
+naqd__kirim_amt_mean,131.8,Direction × amount,Average incoming cash amount
+bank_otkazmasi__chiqim_amt_mean,112.4,Direction × amount,Average outgoing bank-transfer amount
+karta__chiqim_amt_mean,64.4,Direction × amount,Average outgoing card amount
+in_amt_min,53.0,Direction × amount,Minimum incoming amount
+amt_min,47.0,Other,Minimum transaction amount
+type_bank_otkazmasi_amt_std,42.4,Transaction type,Bank-transfer amount variability
+type_bank_otkazmasi_amt_mean,40.6,Transaction type,Average bank-transfer amount
+type_karta_amt_std,39.2,Transaction type,Card amount variability
+type_xalqaro_90d_amt_mean,33.0,Transaction type,90-day average international amount
+out_amt_min,32.2,Direction × amount,Minimum outgoing amount
+type_naqd_amt_mean,31.8,Transaction type,Cash transaction behavior
+sig_doy_sin,30.6,Calendar / metadata,Seasonal signal-date pattern (sin)
+amt_min_180d,24.8,Other,Minimum transaction behavior
+sig_doy_cos,24.2,Calendar / metadata,Seasonal signal-date pattern (cos)
+xalqaro__chiqim_amt_mean,23.6,Direction × amount,Outgoing transaction behavior
+type_switch_rate,22.8,Transaction type,Transaction-type switching rate
+night_share_60d,22.4,Time behavior,60-day nighttime transaction share
+type_naqd_abs_sum,21.2,Transaction type,Total absolute cash activity
+shift__r14d_vs_p14_90d__type_l1,19.4,Behavioral shifts,Recent 14-day transaction-type shift vs prior history
+bank_otkazmasi__kirim_amt_mean,19.0,Direction × amount,Incoming transaction behavior
+p30_180d__weekend_share,18.8,Time behavior,Weekend activity share
+signal_num,18.6,Calendar / metadata,Signal identifier structure
+shift__r30d_vs_p30_180d__type_js,17.6,Behavioral shifts,Recent 30-day transaction-type distribution shift
+type_naqd_90d_amt_mean,17.4,Transaction type,Cash transaction behavior
+shift__r7d_vs_p7_30d__type_l1,17.0,Behavioral shifts,Shift · r7d vs p7 30d · type l1
+type_bank_otkazmasi_30d_amt_mean,16.0,Transaction type,Bank-transfer behavior
+shift__r7d_vs_p7_30d__amt_z,16.0,Behavioral shifts,Shift · r7d vs p7 30d · amt z
+shift__r3d_vs_p3_14d__type_js,15.8,Behavioral shifts,Shift · r3d vs p3 14d · type js
+out_amt_shift_30_90,15.2,Behavioral shifts,Out amt shift 30 90
+type_shift_xalqaro_90d_vs_all,15.0,Behavioral shifts,International transaction behavior
+shift__r7d_vs_p7_30d__amt_mean_ratio,14.8,Behavioral shifts,Average transaction behavior
+shift__r3d_vs_p3_14d__type_l1,14.4,Behavioral shifts,Shift · r3d vs p3 14d · type l1
+evening_share_3d,14.2,Other,Evening share 3d
+last100__type_switch,13.8,Recent sequence,Behavior switching frequency
+type_naqd_amt_std,13.6,Transaction type,Cash transaction behavior
+naqd__chiqim_share,13.6,Direction × amount,Outgoing transaction behavior
+p14_90d__type_naqd_share,13.6,Transaction type,Cash transaction behavior
+type_naqd_30d_amt_mean,13.0,Transaction type,Cash transaction behavior
+type_shift_karta_90d_vs_all,13.0,Behavioral shifts,Card transaction behavior
+shift__r7d_vs_p7_30d__type_js,12.8,Behavioral shifts,Shift · r7d vs p7 30d · type js
+p30_180d__night_share,12.4,Time behavior,Nighttime activity share
+shift__r7d_vs_p7_30d__amt_std_ratio,12.2,Behavioral shifts,Transaction variability
+type_bank_otkazmasi_7d_amt_mean,12.2,Transaction type,Bank-transfer behavior
+recent_min_z_30d,12.2,Other,Minimum transaction behavior
+amt_tail_hi_99,12.0,Other,Amt tail hi 99
+out_amt_shift_7_30,11.8,Behavioral shifts,Out amt shift 7 30
+shift__r30d_vs_p30_180d__type_l1,11.8,Behavioral shifts,Shift · r30d vs p30 180d · type l1
+weekday_entropy,11.8,Other,Weekday entropy
+history_days,11.8,Other,History days
+evening_share_7d,11.6,Other,Evening share 7d
+type_shift_naqd_30d_vs_all,11.4,Behavioral shifts,Cash transaction behavior
+shift__r14d_vs_p14_90d__in_share_ratio,11.4,Behavioral shifts,Shift · r14d vs p14 90d · in share ratio
+type_shift_bank_otkazmasi_90d_vs_all,11.4,Behavioral shifts,Bank-transfer behavior
+out_amt_max_7d,11.0,Direction × amount,Maximum transaction behavior
+weekend_night_share,10.8,Time behavior,Nighttime activity share
+shift__r7d_vs_p7_30d__amt_mean_diff,10.8,Behavioral shifts,Average transaction behavior
+out_amt_std_7d,10.8,Direction × amount,Transaction variability
+out_amt_max,10.6,Direction × amount,Maximum transaction behavior
+type_bank_otkazmasi_90d_amt_mean,10.6,Transaction type,Bank-transfer behavior
+out_amt_shift_7_90,10.6,Behavioral shifts,Out amt shift 7 90
+karta__chiqim_30d_share,10.4,Direction × amount,Outgoing transaction behavior
+r14d__type_naqd_share,10.0,Transaction type,Cash transaction behavior
+last100__abs_max,10.0,Recent sequence,Maximum transaction behavior
+p3_14d__night_share,10.0,Time behavior,Nighttime activity share
+shift__r7d_vs_p7_30d__amt_std_diff,10.0,Behavioral shifts,Transaction variability
+shift__r3d_vs_p3_14d__night_share_diff,10.0,Behavioral shifts,Nighttime activity share
+cumshift__night_share_90_365__diff,9.8,Behavioral shifts,Nighttime activity share
+in_amt_shift_30_90,9.8,Behavioral shifts,In amt shift 30 90
+p3_14d__in_share,9.8,Other,P3 14d · in share
+shift__r14d_vs_p14_90d__amt_mean_ratio,9.6,Behavioral shifts,Average transaction behavior
+p3_14d__type_bank_otkazmasi_share,9.6,Transaction type,Bank-transfer behavior
+afternoon_share,9.6,Other,Afternoon share
+type_xalqaro_amt_std,9.6,Transaction type,International transaction behavior
+morning_share,9.4,Other,Morning share
+in_amt_shift_7_30,9.4,Behavioral shifts,In amt shift 7 30
+type_shift_naqd_90d_vs_all,9.4,Behavioral shifts,Cash transaction behavior
+cumshift__weekend_share_90_365__diff,9.4,Behavioral shifts,Weekend activity share
+naqd__chiqim_amt_mean,9.4,Direction × amount,Outgoing transaction behavior
+type_xalqaro_amt_mean,9.4,Transaction type,International transaction behavior
+p7_30d__type_naqd_share,9.4,Transaction type,Cash transaction behavior
