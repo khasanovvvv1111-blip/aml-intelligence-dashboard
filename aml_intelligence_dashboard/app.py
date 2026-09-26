@@ -245,9 +245,9 @@ def plot(fig):
     st.plotly_chart(fig,use_container_width=True,config=PLOT_CONFIG)
 
 def risk_band(v):
-    if v>=.80:return "HIGH RISK","risk-high"
-    if v>=.50:return "MEDIUM RISK","risk-medium"
-    return "LOW RISK","risk-low"
+    if v>=.80:return "HIGH SCORE BAND","risk-high"
+    if v>=.50:return "MEDIUM SCORE BAND","risk-medium"
+    return "LOW SCORE BAND","risk-low"
 
 st.sidebar.markdown("""
 <div class="brand">
@@ -274,7 +274,7 @@ if page=="Executive Summary":
       ("Train alerts",f'{S["train_alerts"]:,}',"labeled signals"),
       ("Escalation rate",f'{S["escalation_rate"]:.2%}',f'{S["positive_alerts"]:,} escalated'),
       ("Validated ROC-AUC",f'{S["v2_best_auc"]:.4f}',f'+{S["delta_vs_v1"]:.4f} vs V1'),
-      ("Hidden-test alerts",f'{S["test_alerts"]:,}',"continuous risk scores"),
+      ("Test alerts",f'{S["test_alerts"]:,}',"available ranking scores"),
     ])
 
     st.markdown("""
@@ -296,9 +296,10 @@ if page=="Executive Summary":
                    labels={"year_month":"Signal month","alerts":"Alerts"})
         plot(style_fig(fig,380))
     with c2:
-        fig=px.pie(bands,names="risk_band",values="alerts",hole=.68,title="Hidden-test risk bands")
+        fig=px.pie(bands,names="risk_band",values="alerts",hole=.68,title="Available test score bands")
         fig.update_traces(textinfo="percent+label")
         plot(style_fig(fig,380))
+    st.caption("Model validation and test-score exploration are shown separately; ROC-AUC is based on out-of-fold labeled validation.")
 
     section("Model progress","OOF validation")
     perf=csv("model_perf.csv")
@@ -328,7 +329,7 @@ elif page=="Exploratory Analysis":
         fig.update_yaxes(tickformat=".0%")
         plot(style_fig(fig))
     with c4:
-        fig=px.bar(hist,x="bin_mid",y="count",title="Hidden-test risk-score distribution",
+        fig=px.bar(hist,x="bin_mid",y="count",title="Available test-score distribution",
                    labels={"bin_mid":"Risk score","count":"Alerts"})
         plot(style_fig(fig))
 
@@ -369,10 +370,10 @@ elif page=="Behavior Intelligence":
     """,unsafe_allow_html=True)
 
 elif page=="Risk Explorer":
-    hero("Risk Explorer","Inspect an alert's score context with a lightweight investigator-style view.")
-    source=st.radio("Dataset",["Hidden test predictions","Train OOF demo"],horizontal=True)
+    hero("Risk Explorer","Inspect an alert score in context with a lightweight investigator-style view.")
+    source=st.radio("Dataset",["Available test scores","Train OOF demo"],horizontal=True)
 
-    if source=="Hidden test predictions":
+    if source=="Available test scores":
         df=csv("risk_test.csv",dtype={"signal_id":"string"})
         default=str(df.sort_values("ehtimollik",ascending=False).iloc[0]["signal_id"])
         sid=st.text_input("Signal ID",value=default,help="Paste a signal_id from the test set.")
@@ -391,8 +392,8 @@ elif page=="Risk Explorer":
             kpis([
               ("Risk score",f"{score:.4f}","continuous ranking score"),
               ("Risk percentile",f"{percentile:.1%}","within hidden test"),
-              ("Risk band",band.replace(" RISK",""),"dashboard interpretation"),
-              ("Dataset","Hidden test","unlabeled"),
+              ("Score band",band.replace(" SCORE BAND",""),"dashboard interpretation"),
+              ("Dataset","Test set","unlabeled"),
             ])
             c1,c2=st.columns([.8,1.2])
             with c1:
@@ -403,6 +404,7 @@ elif page=="Risk Explorer":
                 nearby=df.iloc[(df["ehtimollik"]-score).abs().argsort()[:8]][["signal_id","signal_sanasi","ehtimollik"]].sort_values("ehtimollik",ascending=False)
                 st.markdown("#### Similar-scored alerts")
                 st.dataframe(nearby,use_container_width=True,hide_index=True)
+            st.caption("Available test-score artifact shown for exploration. Validated V2 ROC-AUC is reported separately and these scores should not be interpreted as calibrated real-world probabilities.")
     else:
         df=csv("risk_train.csv",dtype={"signal_id":"string"})
         default=str(df.sort_values("demo_risk_score",ascending=False).iloc[0]["signal_id"])
