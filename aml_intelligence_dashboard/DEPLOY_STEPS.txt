@@ -1,0 +1,48 @@
+FAST DEPLOY CHECKLIST
+
+A. DOWNLOAD
+1. Download aml_intelligence_dashboard.zip.
+2. Extract it.
+
+B. TEST LOCALLY (optional but recommended)
+1. Open Terminal in the extracted folder.
+2. Run:
+   python -m pip install -r requirements.txt
+3. Run:
+   streamlit run app.py
+4. Open localhost:8501.
+
+C. GITHUB
+1. Go to github.com and create a new PUBLIC repository:
+   aml-intelligence-dashboard
+2. Do NOT add a README/license during repo creation if you want the easiest upload.
+3. Upload all extracted files/folders:
+   app.py
+   requirements.txt
+   README.md
+   .streamlit/
+   data/
+4. Commit changes.
+
+D. STREAMLIT CLOUD
+1. Open Streamlit Community Cloud.
+2. Sign in with GitHub.
+3. Create app.
+4. Select your repository.
+5. Branch: main
+6. Main file: app.py
+7. Deploy.
+
+E. FINAL TEST
+1. Open the public URL.
+2. Open it again in an incognito/private browser.
+3. Click every page:
+   Overview
+   Exploratory Analysis
+   Risk Explorer
+   Model Intelligence
+   Methodology
+4. If all pages work, copy that URL into the hackathon form.
+
+DO NOT upload the 7M-row transaction parquet files to the website repo.
+This package is intentionally lightweight.
